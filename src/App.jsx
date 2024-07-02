@@ -16,7 +16,7 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <Header />
       <main>
         <section id="core-concepts">
@@ -37,8 +37,8 @@ function App() {
           </menu>
           {!selectedTopic ? (
             <p>Please select a topic.</p>
-            ) : (
-              <div id="tab-content">
+          ) : (
+            <div id="tab-content">
               <h3>{EXAMPLES[selectedTopic].title}</h3>
               <p>{EXAMPLES[selectedTopic].description}</p>
               <pre>
@@ -46,12 +46,12 @@ function App() {
                   {EXAMPLES[selectedTopic].code}
                 </code>
               </pre>
-          </div>
-            )}
+            </div>
+          )}
         </section>
         <h2>Time to get started!</h2>
       </main>
-    </div>
+    </>
   );
 }
 
